@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Custom Greeting</title></head>
+<body>
+  <h2>Generate a Custom Greeting</h2>
+  <form action="/submit-greet" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Time of Day:</label><br>
+    <select name="time" required>
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+      <option value="night">Night</option>
+    </select><br><br>
+
+    <input type="submit" value="Generate Greeting">
+  </form>
+</body>
+</html>

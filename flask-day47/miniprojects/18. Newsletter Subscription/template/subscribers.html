@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Subscribers</title></head>
+<body>
+  <h2>Subscribers{% if month %} in {{ month }}{% endif %}</h2>
+  <ul>
+    {% for s in subscribers %}
+      <li>{{ s.name }} — {{ s.email }} (Subscribed in {{ s.month }})</li>
+    {% else %}
+      <li>No subscribers found.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

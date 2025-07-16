@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fitness Goals</title></head>
+<body>
+  <h2>Fitness Goals {% if goal_type %}filtered by "{{ goal_type }}"{% endif %}</h2>
+  <ul>
+    {% for g in goals %}
+      <li>{{ g.name }} – {{ g.goal.capitalize() }}</li>
+    {% else %}
+      <li>No goals found.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

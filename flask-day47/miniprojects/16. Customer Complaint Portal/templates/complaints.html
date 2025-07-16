@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Complaints List</title></head>
+<body>
+  <h2>Complaints{% if urgency %} with urgency: {{ urgency }}{% endif %}</h2>
+  <ul>
+    {% for c in complaints %}
+      <li><strong>{{ c.name }}</strong>: {{ c.issue }} (Urgency: {{ c.urgency.capitalize() }})</li>
+    {% else %}
+      <li>No complaints found.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

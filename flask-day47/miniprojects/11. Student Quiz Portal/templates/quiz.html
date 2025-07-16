@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Student Quiz</title></head>
+<body>
+  <h2>Student Quiz</h2>
+  <form action="/quiz-result" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>1. What is the capital of France?</label><br>
+    <input type="radio" name="q1" value="A" required> Berlin<br>
+    <input type="radio" name="q1" value="B"> Paris<br>
+    <input type="radio" name="q1" value="C"> Madrid<br><br>
+
+    <label>2. What is 2 + 3?</label><br>
+    <input type="radio" name="q2" value="A" required> 4<br>
+    <input type="radio" name="q2" value="B"> 6<br>
+    <input type="radio" name="q2" value="C"> 5<br><br>
+
+    <label>3. Which language is used for Flask?</label><br>
+    <input type="radio" name="q3" value="A" required> Python<br>
+    <input type="radio" name="q3" value="B"> Java<br>
+    <input type="radio" name="q3" value="C"> C++<br><br>
+
+    <input type="submit" value="Submit Quiz">
+  </form>
+</body>
+</html>

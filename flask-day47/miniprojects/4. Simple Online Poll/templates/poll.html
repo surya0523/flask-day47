@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Poll</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .poll-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+    }
+    input[type="submit"] {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="poll-container">
+    <h2>Vote for an Option</h2>
+    <form action="/vote" method="POST">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+      
+      <label>Choose an option:</label>
+      <select name="option">
+        <option value="A">Option A</option>
+        <option value="B">Option B</option>
+        <option value="C">Option C</option>
+      </select>
+      
+      <input type="submit" value="Submit Vote">
+    </form>
+  </div>
+</body>
+</html>

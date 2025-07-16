@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ratings{% if movie_filter %} for {{ movie_filter }}{% endif %}</title></head>
+<body>
+  <h2>Movie Ratings{% if movie_filter %} for "{{ movie_filter }}"{% endif %}</h2>
+  <ul>
+    {% for r in ratings %}
+      <li><strong>{{ r.name }}</strong> rated <em>{{ r.movie }}</em>: {{ r.rating }}/5</li>
+    {% else %}
+      <li>No ratings found.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

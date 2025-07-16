@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Quiz Certificate Form</title></head>
+<body>
+  <h2>Enter Quiz Details</h2>
+  <form method="POST" action="/quiz-form">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Score (0-10):</label><br>
+    <input type="number" name="score" min="0" max="10" required><br><br>
+
+    <input type="submit" value="Generate Certificate">
+  </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Certificates</title></head>
+<body>
+  <h2>Certificates{% if score_filter %} with Score {{ score_filter }}{% endif %}</h2>
+  <ul>
+    {% for c in certificates %}
+      <li>{{ c.name }} - Score: {{ c.score }}/10</li>
+    {% else %}
+      <li>No certificates found.</li>
+    {% endfor %}
+  </ul>
+  <p>Filter by score: 
+    <a href="/certificates?score=10">10</a> | 
+    <a href="/certificates?score=9">9</a> | 
+    <a href="/certificates">All</a>
+  </p>
+</body>
+</html>

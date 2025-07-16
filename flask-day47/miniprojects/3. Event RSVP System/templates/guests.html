@@ -1,0 +1,8 @@
+<h2>Guest List{% if attending %} - Attending: {{ attending|capitalize }}{% endif %}</h2>
+<ul>
+  {% for guest in guests %}
+    <li>{{ guest.name }} ({{ guest.email }}) - Attending: {{ guest.attending }}</li>
+  {% else %}
+    <li>No guests found.</li>
+  {% endfor %}
+</ul>

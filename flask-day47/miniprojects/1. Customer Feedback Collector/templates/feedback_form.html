@@ -1,0 +1,8 @@
+<h2>Customer Feedback Form</h2>
+<form method="POST" action="{{ url_for('submit_feedback') }}">
+  Name: <input type="text" name="name" required><br>
+  Email: <input type="email" name="email" required><br>
+  Message:<br>
+  <textarea name="message" required></textarea><br>
+  <button type="submit">Submit</button>
+</form>

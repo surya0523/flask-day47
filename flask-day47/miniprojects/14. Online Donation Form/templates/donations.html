@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Donations</title></head>
+<body>
+  <h2>Donations {% if purpose %}for {{ purpose }}{% endif %}</h2>
+  <ul>
+    {% for d in donations %}
+      <li>{{ d.name }} donated ${{ "%.2f"|format(d.amount) }} for {{ d.purpose }}</li>
+    {% else %}
+      <li>No donations found.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

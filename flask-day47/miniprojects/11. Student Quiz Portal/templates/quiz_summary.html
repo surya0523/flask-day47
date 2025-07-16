@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Quiz Summary</title></head>
+<body>
+  <h2>Quiz Summary for {{ result.name }}</h2>
+  <p>Score: {{ result.score }}/3</p>
+  <ul>
+    <li>Q1: {{ result.answers.q1 }}</li>
+    <li>Q2: {{ result.answers.q2 }}</li>
+    <li>Q3: {{ result.answers.q3 }}</li>
+  </ul>
+  <a href="/leaderboard">View Leaderboard</a>
+</body>
+</html>

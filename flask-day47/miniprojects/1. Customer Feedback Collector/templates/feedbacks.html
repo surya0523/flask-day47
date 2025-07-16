@@ -1,0 +1,8 @@
+<h2>All Feedbacks{% if user %} from {{ user }}{% endif %}</h2>
+<ul>
+  {% for fb in feedbacks %}
+    <li><strong>{{ fb.name }}</strong> ({{ fb.email }}): {{ fb.message }}</li>
+  {% else %}
+    <li>No feedback found.</li>
+  {% endfor %}
+</ul>

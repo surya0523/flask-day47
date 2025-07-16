@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Book Recommendation</title></head>
+<body>
+  <h2>Get Book Recommendations</h2>
+  <form action="/show-recommendation" method="POST">
+    <label>Your Name:</label><br>
+    <input type="text" name="user" required><br><br>
+
+    <label>Choose Genre:</label><br>
+    <select name="genre" required>
+      <option value="sci-fi">Sci-Fi</option>
+      <option value="romance">Romance</option>
+    </select><br><br>
+
+    <input type="submit" value="Get Recommendations">
+  </form>
+</body>
+</html>

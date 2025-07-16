@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Deals</title>
+</head>
+<body>
+  <h2>Travel Deals for {{ destination | capitalize }}</h2>
+  {% if deals %}
+    <ul>
+      {% for deal in deals %}
+        <li>{{ deal }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No deals available for this destination.</p>
+  {% endif %}
+</body>
+</html>

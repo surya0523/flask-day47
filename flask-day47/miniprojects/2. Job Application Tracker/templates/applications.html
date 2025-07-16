@@ -1,0 +1,8 @@
+<h2>Job Applications{% if position %} for "{{ position }}"{% endif %}</h2>
+<ul>
+  {% for app in applications %}
+    <li><strong>{{ app.name }}</strong> - {{ app.position }} ({{ app.email }})</li>
+  {% else %}
+    <li>No applications found.</li>
+  {% endfor %}
+</ul>

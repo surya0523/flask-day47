@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Registration</title>
+</head>
+<body>
+  <h2>Course Registration Form</h2>
+  <form method="POST" action="/register">
+    <label>Student Name:</label><br>
+    <input type="text" name="student" required><br><br>
+
+    <label>Select Course:</label><br>
+    <select name="course">
+      {% for course in courses %}
+        <option value="{{ course.code }}">{{ course.code }} - {{ course.name }}</option>
+      {% endfor %}
+    </select><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>

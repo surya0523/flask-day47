@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flask Query Parameter Tester</title>
+</head>
+<body>
+  <h1>Query Parameter Test</h1>
+
+  <!-- Task 1: /search -->
+  <h3>1. Search</h3>
+  <form action="/search" method="get">
+    Keyword: <input type="text" name="keyword">
+    <input type="submit" value="Search">
+  </form>
+
+  <!-- Task 2: /filter -->
+  <h3>2. Filter</h3>
+  <form action="/filter" method="get">
+    Type: <input type="text" name="type">
+    Color: <input type="text" name="color">
+    Size: <input type="text" name="size">
+    <input type="submit" value="Filter">
+  </form>
+
+  <!-- Task 3: /safe-search -->
+  <h3>3. Safe Search</h3>
+  <a href="/safe-search">Try Without Keyword</a> |
+  <a href="/safe-search?keyword=flask">Try With Keyword</a>
+
+  <!-- Task 4: /params-list -->
+  <h3>4. All Query Parameters</h3>
+  <a href="/params-list?name=gm&level=admin&status=active">View Parameters List</a>
+
+  <!-- Task 5: /greet -->
+  <h3>5. Greet</h3>
+  <form action="/greet" method="get">
+    Name: <input type="text" name="name">
+    <input type="submit" value="Greet Me">
+  </form>
+
+  <!-- Task 6: /profile?mode= -->
+  <h3>6. Profile Mode</h3>
+  <a href="/profile">Default (User)</a> |
+  <a href="/profile?mode=admin">Admin Mode</a>
+
+  <!-- Task 7: /count-params -->
+  <h3>7. Count Parameters</h3>
+  <a href="/count-params?x=1&y=2&z=3">Check Count</a>
+
+  <!-- Task 8: /show-table -->
+  <h3>8. Query Parameters in Table</h3>
+  <a href="/show-table?a=apple&b=banana&c=cherry">View Table</a>
+
+  <!-- Task 9: /toggle?debug=true -->
+  <h3>9. Debug Mode</h3>
+  <a href="/toggle">Debug OFF</a> |
+  <a href="/toggle?debug=true">Debug ON</a>
+
+  <!-- Task 10: /display/<section>?lang= -->
+  <h3>10. Combined Route + Query</h3>
+  <a href="/display/home">/display/home</a> |
+  <a href="/display/home?lang=tamil">/display/home?lang=tamil</a>
+
+</body>
+</html>

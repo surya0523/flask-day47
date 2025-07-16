@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report a Bug</title>
+</head>
+<body>
+  <h2>Bug Report Form</h2>
+  <form action="/submit-report" method="POST">
+    <label>Title:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description" rows="5" required></textarea><br><br>
+
+    <label>Priority:</label><br>
+    <select name="priority">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit Bug Report">
+  </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bug Reports</title>
+</head>
+<body>
+  <h2>Bug Reports {% if priority %} (Priority: {{ priority }}){% endif %}</h2>
+  <ul>
+    {% for bug in bugs %}
+      <li>
+        <strong>{{ bug.title }}</strong> [{{ bug.priority }}] – 
+        <a href="/bug/{{ bug.id }}">View</a>
+      </li>
+    {% else %}
+      <li>No bugs found.</li>
+    {% endfor %}
+  </ul>
+  <p>Filter by priority: 
+    <a href="/bugs?priority=high">High</a> | 
+    <a href="/bugs?priority=medium">Medium</a> | 
+    <a href="/bugs?priority=low">Low</a> | 
+    <a href="/bugs">All</a>
+  </p>
+</body>
+</html>

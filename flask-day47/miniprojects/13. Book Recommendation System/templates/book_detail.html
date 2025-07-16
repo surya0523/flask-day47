@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ book.title }}</title></head>
+<body>
+  <h2>{{ book.title }}</h2>
+  <p><strong>Author:</strong> {{ book.author }}</p>
+  <p><strong>Genre:</strong> {{ book.genre }}</p>
+  <p>{{ book.desc }}</p>
+  <p><a href="/books?genre={{ book.genre }}">Back to list</a></p>
+</body>
+</html>

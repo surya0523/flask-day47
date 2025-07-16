@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Leaderboard</title></head>
+<body>
+  <h2>Leaderboard{% if score_filter %} – Score: {{ score_filter }}{% endif %}</h2>
+  <ul>
+    {% for r in results %}
+      <li>{{ r.name }} – {{ r.score }}/3</li>
+    {% else %}
+      <li>No results found.</li>
+    {% endfor %}
+  </ul>
+  <p>Filter by score:
+    <a href="/leaderboard?score=3">3</a> |
+    <a href="/leaderboard?score=2">2</a> |
+    <a href="/leaderboard?score=1">1</a> |
+    <a href="/leaderboard">All</a>
+  </p>
+</body>
+</html>

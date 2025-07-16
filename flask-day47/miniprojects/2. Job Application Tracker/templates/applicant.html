@@ -1,0 +1,8 @@
+<h2>Applications from {{ name }}</h2>
+<ul>
+  {% for app in applications %}
+    <li>Position: {{ app.position }} | Email: {{ app.email }}</li>
+  {% else %}
+    <li>No applications found for {{ name }}</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course List</title>
+</head>
+<body>
+  <h2>Available Courses{% if dept %} in {{ dept }}{% endif %}</h2>
+  <ul>
+    {% for course in courses %}
+      <li>{{ course.code }} - {{ course.name }} ({{ course.dept }})</li>
+    {% endfor %}
+  </ul>
+
+  <p>Filter by Department: 
+    <a href="/courses?dept=CS">CS</a> | 
+    <a href="/courses?dept=EE">EE</a> | 
+    <a href="/courses?dept=ME">ME</a> | 
+    <a href="/courses">All</a>
+  </p>
+</body>
+</html>

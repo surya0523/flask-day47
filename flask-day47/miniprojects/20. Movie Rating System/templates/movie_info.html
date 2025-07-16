@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ title }}</title></head>
+<body>
+  <h2>{{ title }}</h2>
+  <p><strong>Director:</strong> {{ movie.director }}</p>
+  <p><strong>Year:</strong> {{ movie.year }}</p>
+  <p><strong>Genre:</strong> {{ movie.genre }}</p>
+  <p>{{ movie.desc }}</p>
+  <p><a href="/ratings?movie={{ title }}">See Ratings</a></p>
+</body>
+</html>

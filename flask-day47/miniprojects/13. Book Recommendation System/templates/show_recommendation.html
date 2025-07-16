@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Recommendations</title></head>
+<body>
+  <h2>Hi {{ user }}, here are some {{ genre }} books:</h2>
+  <ul>
+    {% for book in books %}
+      <li>
+        <a href="/book/{{ book.title }}">{{ book.title }}</a> by {{ book.author }}
+      </li>
+    {% endfor %}
+  </ul>
+  <p><a href="/thanks/{{ user }}">Say Thanks</a></p>
+</body>
+</html>

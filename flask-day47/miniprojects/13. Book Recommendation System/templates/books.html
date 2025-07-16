@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Book List</title></head>
+<body>
+  <h2>Books {% if genre %}in {{ genre }}{% endif %}</h2>
+  <ul>
+    {% for book in books %}
+      <li><a href="/book/{{ book.title }}">{{ book.title }}</a> by {{ book.author }}</li>
+    {% else %}
+      <li>No books found.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

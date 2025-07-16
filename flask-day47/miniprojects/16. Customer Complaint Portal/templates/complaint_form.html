@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Submit Complaint</title></head>
+<body>
+  <h2>Customer Complaint Form</h2>
+  <form action="/complaint-submit" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Issue:</label><br>
+    <textarea name="issue" rows="4" required></textarea><br><br>
+
+    <label>Urgency:</label><br>
+    <select name="urgency" required>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit Complaint">
+  </form>
+</body>
+</html>

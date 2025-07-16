@@ -1,0 +1,7 @@
+<h2>Job Application Form</h2>
+<form method="POST" action="{{ url_for('submit_application') }}">
+  Name: <input type="text" name="name" required><br>
+  Email: <input type="email" name="email" required><br>
+  Position: <input type="text" name="position" required><br>
+  <button type="submit">Apply</button>
+</form>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Donate</title></head>
+<body>
+  <h2>Online Donation Form</h2>
+  <form action="/donate-confirm" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Amount (USD):</label><br>
+    <input type="number" name="amount" min="1" step="0.01" required><br><br>
+
+    <label>Purpose:</label><br>
+    <select name="purpose" required>
+      <option value="education">Education</option>
+      <option value="health">Health</option>
+      <option value="environment">Environment</option>
+      <option value="other">Other</option>
+    </select><br><br>
+
+    <input type="submit" value="Donate">
+  </form>
+</body>
+</html>

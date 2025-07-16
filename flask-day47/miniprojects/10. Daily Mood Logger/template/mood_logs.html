@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mood Logs</title>
+</head>
+<body>
+  <h2>Mood Logs{% if filter %} – Filtered by "{{ filter }}" {% endif %}</h2>
+  <ul>
+    {% for entry in entries %}
+      <li><strong>{{ entry.name }}</strong>: {{ entry.mood.capitalize() }} – {{ entry.reason or "No reason given" }}</li>
+    {% else %}
+      <li>No mood logs available.</li>
+    {% endfor %}
+  </ul>
+  <p>Filter by mood: 
+    <a href="/logs?mood=happy">Happy</a> |
+    <a href="/logs?mood=sad">Sad</a> |
+    <a href="/logs?mood=anxious">Anxious</a> |
+    <a href="/logs">All</a>
+  </p>
+</body>
+</html>
